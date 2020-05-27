@@ -1,0 +1,30 @@
+{
+    "name": "NodeDocker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "dev": "tsc-watch --onSuccess \"node dist/index.js\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/cors": "^2.8.6",
+        "@types/express": "^4.17.6",
+        "@types/morgan": "^1.9.0",
+        "@types/node": "^14.0.5",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "morgan": "^1.10.0",
+        "mysql": "^2.18.1",
+        "reflect-metadata": "^0.1.13",
+        "tsc-watch": "^4.2.8",
+        "typeorm": "^0.2.25"
+    },
+    "devDependencies": {
+        "typescript": "^3.9.3"
+    }
+}
