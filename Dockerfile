@@ -6,6 +6,6 @@ COPY package.json .
 
 RUN npm install
 
-COPY /src/index.ts .
+COPY /dist/index.js .
 
-CMD ["node", "index.ts"]
+CMD ["node", "index.js"]
