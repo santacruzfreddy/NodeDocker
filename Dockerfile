@@ -1,11 +1,24 @@
 FROM node:10-alpine
 
-WORKDIR /app
+WORKDIR /usr/app
 
-COPY package.json .
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
 RUN npm install
+# If you are building your code for production
+# RUN npm install --only=production
 
-COPY /dist/index.js .
+# Bundle app source
+COPY . .
 
-CMD ["node", "index.js"]
+# for typescript
+RUN npm run build
+COPY ormconfig.json ./dist/
+#COPY .env ./dist/
+WORKDIR ./dist
+
+EXPOSE 4000
+CMD node src/index.js
