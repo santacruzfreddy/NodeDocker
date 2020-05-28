@@ -13,11 +13,10 @@ export const getUser = async (req: Request, res: Response): Promise<Response> =>
 }
 
 export const createUsers = async (req: Request, res: Response): Promise<Response> => {
-    const nuevoUsuario = getRepository(User).create(req.body);
+    const nuevoUsuario = getRepository(User).create(req.body)
     const results = await getRepository(User).save(nuevoUsuario);
     return res.json(results);
 }
-
 
 export const updateUser = async (req: Request, res: Response): Promise<Response> => {
     console.log(req.body)
@@ -31,10 +30,22 @@ export const updateUser = async (req: Request, res: Response): Promise<Response>
 }
 
 export const deleteUser = async (req: Request, res: Response): Promise<Response> => {
-    const results = await getRepository(User).delete(req.params.id);    
+    const results = await getRepository(User).delete(req.params.id);
     return res.send(results);
 }
 
+
+export const mensajeUser = (req: Request, res: Response) => {
+    return res.send({
+        mesaje: "Este API Rest, es de prueba, incluye las tecnologias nodejs, express, typeorm, docker, mysql y esta desplegado en Heroku",
+        metodo: "tiene Metodos GET, POST, PUT y DELETE",
+        GET_ALl: " https://infinite-fjord-35062.herokuapp.com/users, lista todos los registros",
+        GET: " https://infinite-fjord-35062.herokuapp.com/users/id, lista un registro por el id",
+        POST: " https://infinite-fjord-35062.herokuapp.com/users, crea un nuevo registro", 
+        PUT: "  https://infinite-fjord-35062.herokuapp.com/users, actualiza el registro",
+        DELETE: " https://infinite-fjord-35062.herokuapp.com/users/id, elimina un registro por el id"
+    });
+}
 
 
 

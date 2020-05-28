@@ -5,7 +5,7 @@
     "port": 3306,
     "username": "b32087f8a5c629",
     "password": "e1e75bfd",
-    "database": "heroku_73824661b633b9f",
+    "database": "heroku_73824661b633b9f",    
     "entities": ["/app/dist/entities/**/*"],
     "synchronize": true
 }
