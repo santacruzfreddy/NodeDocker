@@ -1,3 +1,4 @@
+
 {
     "type": "mysql",
     "host": "us-cdbr-east-05.cleardb.net",
@@ -5,6 +6,6 @@
     "username": "b32087f8a5c629",
     "password": "e1e75bfd",
     "database": "heroku_73824661b633b9f",
-    "entities": ["dist/entities/**/*.js"],
+    "entities": ["/app/dist/entities/**/*"],
     "synchronize": true
 }

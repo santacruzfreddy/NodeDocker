@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-WORKDIR /usr/app
+WORKDIR /app
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -20,5 +20,6 @@ COPY ormconfig.json ./dist/
 #COPY .env ./dist/
 WORKDIR ./dist
 
-EXPOSE 4000
-CMD node src/index.js
+RUN pwd 
+EXPOSE 3000
+CMD node index.js
