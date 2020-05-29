@@ -4,10 +4,10 @@ const routes = Router();
 
 
 routes.get('/', mensajeUser)
-routes.get('/users', getUsers)
-routes.get('/users/:id', getUser)
-routes.post('/users', createUsers)
-routes.put('/users', updateUser)
-routes.delete('/users/:id', deleteUser)
+routes.get('/developers', getUsers)
+routes.get('/developers/:id', getUser)
+routes.post('/developers', createUsers)
+routes.put('/developers', updateUser)
+routes.delete('/developers/:id', deleteUser)
 
 export default routes;
