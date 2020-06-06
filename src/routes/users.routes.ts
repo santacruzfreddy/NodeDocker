@@ -10,4 +10,5 @@ routes.post('/developers', createUsers)
 routes.put('/developers', updateUser)
 routes.delete('/developers/:id', deleteUser)
 
+//module.exports= routes;
 export default routes;
